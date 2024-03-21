@@ -102,12 +102,16 @@
     </header>
 
     <main>
+      <!-- filters -->
       <section class="home-filter">
         <!-- filter-header -->
         <div class="filter-header">
           <div class="filter-header-left">
             <span class="filter-header-sell">იყიდება</span>
-            <img src="./assets/icons/switch-on.svg" alt="switch" />
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider round"></span>
+            </label>
             <span class="filter-header-rent">ქირავდება</span>
           </div>
           <div class="filter-header-right">
@@ -139,38 +143,177 @@
             <div class="filters-row">
               <!-- box 1 -->
               <div class="filter-box">
-                <button class="filter-dropbtn" onclick="filterFunction()">
+                <button
+                  class="filter-dropbtn filter-dropbtn1"
+                  onclick="filterFunction1()"
+                >
                   <span>მწარმოებელი</span>
                   <img src="./assets/icons/arrow-down.svg" alt="arrow" />
                 </button>
                 <!-- dropdown -->
-                <div id="filterDropdown" class="filter-dropdown-content">
-                  <!--  -->
-                  <h1>yle</h1>
+                <div
+                  id="filterDropdown"
+                  class="filter-dropdown-content filter-drop-1"
+                >
+                  <!--car brands -->
+                  <div class="car-brands">
+                    <div class="brand toyota">
+                      <img src="./assets/img/toyota.png" alt="toyota" />
+                      <span class="brand-desc">Toyota</span>
+                    </div>
+                    <div class="brand merc">
+                      <img src="./assets/img/merc.png" alt="merc" />
+                      <span class="brand-desc">Mercedes</span>
+                    </div>
+                    <div class="brand bmw">
+                      <img src="./assets/img/bmw.png" alt="bmw" />
+                      <span class="brand-desc">Bmw</span>
+                    </div>
+                    <div class="brand ford">
+                      <img src="./assets/img/ford.png" alt="ford" />
+                      <span class="brand-desc">Ford</span>
+                    </div>
+                    <div class="brand honda">
+                      <img src="./assets/img/honda.png" alt="honda" />
+                      <span class="brand-desc">Honda</span>
+                    </div>
+                    <div class="brand hyndai">
+                      <img src="./assets/img/hyndai.png" alt="hyndai" />
+                      <span class="brand-desc">Hyndai</span>
+                    </div>
+                    <div class="brand subaru">
+                      <img src="./assets/img/subaru.png" alt="subaru" />
+                      <span class="brand-desc">Subaru</span>
+                    </div>
+                    <div class="brand wolksvagen">
+                      <img src="./assets/img/wolksvagen.png" alt="wolksvagen" />
+                      <span class="brand-desc">Wolksvagen</span>
+                    </div>
+                    <div class="brand chevy">
+                      <img src="./assets/img/chvey.png" alt="chevy" />
+                      <span class="brand-desc">Chevrolet</span>
+                    </div>
+                    <div class="brand nissan">
+                      <img src="./assets/img/nissan.png" alt="nissan" />
+                      <span class="brand-desc">Nissan</span>
+                    </div>
+                  </div>
+
+                  <div class="car-brands-list">
+                    <label>
+                      <input type="checkbox" />
+                      <span>Mercedes</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>Bmw</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>Ford</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>Hyndai</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>Honda</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>Subaru</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>Toyota</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>Wolksvagen</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>Chevrolet</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>Mercedes</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>Nissan</span>
+                    </label>
+                  </div>
                 </div>
               </div>
               <!-- box 2 -->
               <div class="filter-box">
-                <button class="filter-dropbtn" onclick="filterFunction()">
+                <button class="filter-dropbtn">
                   <span>მოდელი</span>
                   <img src="./assets/icons/arrow-down.svg" alt="arrow" />
                 </button>
-                <!-- dropdown -->
-                <div id="filterDropdown" class="filter-dropdown-content">
-                  <!--  -->
-                  <h1>yle</h1>
-                </div>
               </div>
               <!-- box 3 -->
               <div class="filter-box">
-                <button class="filter-dropbtn" onclick="filterFunction()">
+                <button
+                  class="filter-dropbtn filter-dropbtn2"
+                  onclick="filterFunction2()"
+                >
                   <span>მდებარეობა</span>
                   <img src="./assets/icons/arrow-down.svg" alt="arrow" />
                 </button>
                 <!-- dropdown -->
-                <div id="filterDropdown" class="filter-dropdown-content">
-                  <!--  -->
-                  <h1>yle</h1>
+                <div
+                  id="filterDropdown2"
+                  class="filter-dropdown-content filter-drop-2"
+                >
+                  <div class="car-brands-list">
+                    <label>
+                      <input type="checkbox" />
+                      <span>თბილისი</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>ქუთაისი</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>ბათუმი</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>ფოთი</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>რუსთავი</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>დუშეთი</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>ჭიათურა</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>საჩხერე</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>მარტვილი</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>გურჯაანი</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      <span>გარდაბანი</span>
+                    </label>
+                  </div>
                 </div>
               </div>
               <!-- box 4 -->
@@ -234,11 +377,17 @@
             <div class="filter-row-nav">
               <div class="filter-row-box-left">
                 <div class="frbl">
-                  <img src="./assets/icons/switch-off.svg" alt="switch" />
+                  <label class="switch-blue">
+                    <input type="checkbox" />
+                    <span class="slider-blue round"></span>
+                  </label>
                   <p>განცხადებები <span>VIN კოდით</span></p>
                 </div>
                 <div class="frbl">
-                  <img src="./assets/icons/switch-off.svg" alt="switch" />
+                  <label class="switch-blue">
+                    <input type="checkbox" />
+                    <span class="slider-blue round"></span>
+                  </label>
                   <p>დამალე <span>ფასი შეთანხმებით</span></p>
                 </div>
               </div>
@@ -249,6 +398,7 @@
           </div>
         </div>
       </section>
+      <!-- super vip -->
     </main>
   </body>
 </html>

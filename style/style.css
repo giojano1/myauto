@@ -145,6 +145,13 @@ nav {
 }
 .dropnav label {
   font-size: 1.4rem;
+  padding-top: 10px;
+}
+.dropnav label span {
+  padding-left: 15px;
+}
+.dropnav label input[type="radio"] {
+  transform: scale(1.8);
 }
 .dropdown-currency {
   margin-top: 20px;
@@ -234,9 +241,66 @@ nav {
   color: gray;
   font-family: "regular";
 }
-.filter-header-left img {
-  height: 30px;
-  padding: 0px 8px;
+/* switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  margin: 0px 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: black;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(8px);
+  -ms-transform: translateX(8px);
+  transform: translateX(8px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 .filter-header-right span {
   color: gray;
@@ -342,6 +406,66 @@ nav {
   display: flex;
   align-items: center;
 }
+.switch-blue {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.switch-blue input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider-blue {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--main-gray);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider-blue:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider-blue {
+  background-color: rgb(5, 234, 5);
+}
+
+input:focus + .slider-blue {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider-blue:before {
+  -webkit-transform: translateX(8px);
+  -ms-transform: translateX(8px);
+  transform: translateX(8px);
+}
+
+/* Rounded sliders */
+.slider-blue.round {
+  border-radius: 34px;
+}
+
+.slider-blue.round:before {
+  border-radius: 50%;
+}
 .frbl {
   display: flex;
   align-items: center;
@@ -380,6 +504,64 @@ nav {
   background-color: #d93600;
   transition: 500ms;
 }
+.car-brands {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.brand {
+  width: 54px;
+  height: 40px;
+  border: 1px solid var(--main-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin: 4px;
+  position: relative;
+}
+.brand span {
+  position: absolute;
+  top: 45px;
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 8px;
+  z-index: 1;
+  display: none;
+}
+.brand:hover {
+  border: 1px solid black;
+}
+.brand:hover > .brand-desc {
+  display: block;
+}
+
+.brand img {
+  width: 34px;
+  height: auto;
+}
+.car-brands-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px;
+}
+.car-brands-list label {
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+}
+.car-brands-list label span {
+  font-size: 1.4rem;
+  padding-left: 15px;
+  font-family: "regular";
+}
+.car-brands-list input[type="checkbox"] {
+  transform: scale(1.8);
+}
+
 /* drop down */
 .dropdown {
   position: relative;
@@ -389,7 +571,11 @@ nav {
   padding: 10px;
   position: absolute;
   background-color: white;
+  border: 1px solid var(--main-gray);
+  border-radius: 10px;
   min-width: 160px;
+  max-width: 360px;
+  max-height: 380px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -413,3 +599,5 @@ nav {
 .dropdown-currency {
   margin-top: 20px;
 }
+
+/* SUPER VIP */
