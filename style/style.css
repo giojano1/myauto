@@ -3,3 +3,136 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "regular";
+  src: url(/assets/fonts/regular-myauto.woff2);
+}
+
+@font-face {
+  font-family: "medium";
+  src: url(/assets/fonts/medium-myauto.woff2);
+}
+
+@font-face {
+  font-family: "bold";
+  src: url(/assets/fonts/bold-myauto.woff2);
+}
+:root {
+  --main-orange: #fd3f00;
+  --main-gray: #bebfc3;
+  --main-text: #272a37;
+}
+html {
+  font-size: 10px;
+}
+body {
+  background-color: #f2f3f6;
+  font-family: "medium";
+}
+a {
+  text-decoration: none;
+}
+header {
+  background-color: white;
+}
+nav {
+  display: flex;
+  width: 85%;
+  margin: auto;
+  justify-content: space-between;
+  max-width: 1536px;
+  align-items: center;
+  padding: 20px 0px;
+}
+.navbar-right,
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 40px;
+}
+.logo img {
+  width: 130px;
+}
+.searchbar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 20px;
+}
+.searchbar img {
+  position: absolute;
+  left: 10px;
+}
+.searchbar label input {
+  height: 40px;
+  width: 300px;
+  padding-left: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--main-gray);
+}
+.searchbar label input::placeholder {
+  font-size: 1.2rem;
+}
+.navbuttons {
+  margin-left: 16px;
+}
+.navbuttons button {
+  height: 40px;
+  border: none;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+}
+.addnewBut button {
+  background-color: #fd3f0020;
+  padding: 0px 24px;
+}
+.addnewBut button a {
+  margin-left: 8px;
+  color: var(--main-orange);
+  font-size: 1.2rem;
+  font-family: "medium";
+}
+.addnewBut button img {
+  width: 16px;
+  padding-top: 2px;
+}
+
+.languageBut button {
+  background-color: transparent;
+  border: 1px solid var(--main-gray);
+  padding: 0px 8px;
+}
+.languageBut button a {
+  margin-left: 8px;
+  color: black;
+  font-size: 1.4rem;
+  font-family: "medium";
+}
+.loginBut button {
+  background-color: transparent;
+  border: 1px solid var(--main-gray);
+  padding: 0px 8px;
+}
+.loginBut button a {
+  margin-left: 8px;
+  color: black;
+  font-size: 1.4rem;
+  font-family: "medium";
+}
+.tnetBut button {
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid var(--main-gray);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tnetBut button img {
+  height: 30px;
+}
