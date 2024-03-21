@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/style.css" />
+    <script src="./js/main.js"></script>
     <title>
       ახალი და მეორადი ავტომობილები, მოტოტექნიკა, სპეცტექნიკა | MyAuto
     </title>
@@ -31,11 +32,42 @@
             </button>
           </div>
           <div class="languageBut navbuttons">
-            <button>
+            <button class="nav-dropbtn" onclick="navFunction()">
               <img src="./assets/icons/global.svg" alt="" /><a href="#"
-                >ქართული, ლ</a
+                >ქართული, ₾</a
               >
             </button>
+            <!-- dropdown -->
+            <div id="headerDropdown" class="nav-dropdown-content">
+              <!--  -->
+              <div class="dropdown-lang dropnav">
+                <p>ენა</p>
+                <label>
+                  <input name="radio1" type="radio" checked />
+                  <span>ქართული</span>
+                </label>
+                <label>
+                  <input name="radio1" type="radio" />
+                  <span>English</span>
+                </label>
+                <label>
+                  <input name="radio1" type="radio" />
+                  <span>Русский</span>
+                </label>
+              </div>
+              <!-- currency-->
+              <div class="dropdown-currency dropnav">
+                <p>ვალუტა</p>
+                <label>
+                  <input name="radio2" type="radio" />
+                  <span>USD - $</span>
+                </label>
+                <label>
+                  <input name="radio2" type="radio" />
+                  <span>GEL - ₾</span>
+                </label>
+              </div>
+            </div>
           </div>
           <div class="loginBut navbuttons">
             <button>
@@ -49,22 +81,174 @@
       </nav>
 
       <section class="categories">
-        <ul>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-        </ul>
+        <div class="cat-container">
+          <ul class="cat-cat">
+            <li><a href="">განბაჟება/გაფორმება</a></li>
+            <li><a href="">VIN-ის შემოწმება</a></li>
+            <li><a href="">დილერები</a></li>
+            <li><a href="">ავტოსალონები</a></li>
+            <li><a href="">აუქციონი</a></li>
+            <li><a href="">ავტონაწილები</a></li>
+            <li><a href="">კატალოგი</a></li>
+            <li><a href="">ბლოგი</a></li>
+          </ul>
 
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
+          <ul class="cat-nav">
+            <li><a href="">დახმარება</a></li>
+            <li><a href="">კონტაქტი</a></li>
+          </ul>
+        </div>
       </section>
     </header>
+
+    <main>
+      <section class="home-filter">
+        <!-- filter-header -->
+        <div class="filter-header">
+          <div class="filter-header-left">
+            <span class="filter-header-sell">იყიდება</span>
+            <img src="./assets/icons/switch-on.svg" alt="switch" />
+            <span class="filter-header-rent">ქირავდება</span>
+          </div>
+          <div class="filter-header-right">
+            <img src="./assets/icons/trash-bin.svg" alt="bin" />
+            <span>ფილტრების გასუფთავება</span>
+          </div>
+        </div>
+
+        <!-- filter-main -->
+        <div class="filters-main-content">
+          <!-- car type -->
+          <div class="filter-car-type">
+            <div class="car-type car">
+              <img src="./assets/icons/car.svg" alt="car" />
+              <span>ავტომობილები</span>
+            </div>
+            <div class="car-type spectech">
+              <img src="./assets/icons/tractor.svg" alt="tractor" />
+              <span>სპეცტექნიკა</span>
+            </div>
+            <div class="car-type moto">
+              <img src="./assets/icons/motorcycle.svg" alt="moto" />
+              <span>მოტოტექნიკა</span>
+            </div>
+          </div>
+          <!-- filters -->
+          <div class="filters">
+            <!-- row -->
+            <div class="filters-row">
+              <!-- box 1 -->
+              <div class="filter-box">
+                <button class="filter-dropbtn" onclick="filterFunction()">
+                  <span>მწარმოებელი</span>
+                  <img src="./assets/icons/arrow-down.svg" alt="arrow" />
+                </button>
+                <!-- dropdown -->
+                <div id="filterDropdown" class="filter-dropdown-content">
+                  <!--  -->
+                  <h1>yle</h1>
+                </div>
+              </div>
+              <!-- box 2 -->
+              <div class="filter-box">
+                <button class="filter-dropbtn" onclick="filterFunction()">
+                  <span>მოდელი</span>
+                  <img src="./assets/icons/arrow-down.svg" alt="arrow" />
+                </button>
+                <!-- dropdown -->
+                <div id="filterDropdown" class="filter-dropdown-content">
+                  <!--  -->
+                  <h1>yle</h1>
+                </div>
+              </div>
+              <!-- box 3 -->
+              <div class="filter-box">
+                <button class="filter-dropbtn" onclick="filterFunction()">
+                  <span>მდებარეობა</span>
+                  <img src="./assets/icons/arrow-down.svg" alt="arrow" />
+                </button>
+                <!-- dropdown -->
+                <div id="filterDropdown" class="filter-dropdown-content">
+                  <!--  -->
+                  <h1>yle</h1>
+                </div>
+              </div>
+              <!-- box 4 -->
+              <div class="filter-box">
+                <button class="ganbajeba">
+                  <span>განბაჟებული</span>
+                  <div class="middle"></div>
+                  <span>განუბაჟებელი</span>
+                </button>
+              </div>
+              <!-- box 5 -->
+              <div class="filter-box">
+                <button class="filter-dropbtn" onclick="filterFunction()">
+                  <span>წელი</span>
+                  <img src="./assets/icons/arrow-down.svg" alt="arrow" />
+                </button>
+                <!-- dropdown -->
+                <div id="filterDropdown" class="filter-dropdown-content">
+                  <!--  -->
+                  <h1>yle</h1>
+                </div>
+              </div>
+              <!-- box 6 -->
+              <div class="filter-box">
+                <button class="filter-dropbtn" onclick="filterFunction()">
+                  <span>ფასი</span>
+                  <img src="./assets/icons/arrow-down.svg" alt="arrow" />
+                </button>
+                <!-- dropdown -->
+                <div id="filterDropdown" class="filter-dropdown-content">
+                  <!--  -->
+                  <h1>yle</h1>
+                </div>
+              </div>
+              <!-- box 7 -->
+              <div class="filter-box">
+                <button class="filter-dropbtn" onclick="filterFunction()">
+                  <span>საწვავი</span>
+                  <img src="./assets/icons/arrow-down.svg" alt="arrow" />
+                </button>
+                <!-- dropdown -->
+                <div id="filterDropdown" class="filter-dropdown-content">
+                  <!--  -->
+                  <h1>yle</h1>
+                </div>
+              </div>
+              <!-- box 8 -->
+              <div class="filter-box">
+                <button class="filter-dropbtn" onclick="filterFunction()">
+                  <img src="./assets/icons/filter.svg" alt="filter" />
+                  <span>დამატებითი ფილტრები</span>
+                </button>
+                <!-- dropdown -->
+                <div id="filterDropdown" class="filter-dropdown-content">
+                  <!--  -->
+                  <h1>yle</h1>
+                </div>
+              </div>
+            </div>
+            <!-- filter-row-navigation -->
+            <div class="filter-row-nav">
+              <div class="filter-row-box-left">
+                <div class="frbl">
+                  <img src="./assets/icons/switch-off.svg" alt="switch" />
+                  <p>განცხადებები <span>VIN კოდით</span></p>
+                </div>
+                <div class="frbl">
+                  <img src="./assets/icons/switch-off.svg" alt="switch" />
+                  <p>დამალე <span>ფასი შეთანხმებით</span></p>
+                </div>
+              </div>
+              <div class="filter-row-box-right">
+                <button>ძებნა (128160)</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
