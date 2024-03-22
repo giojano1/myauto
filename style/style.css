@@ -653,8 +653,11 @@ input:checked + .slider-blue:before {
   padding-top: 20px;
 }
 .car-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 19%;
-  height: auto;
+  height: 100%;
   background-color: white;
   border-radius: 16px;
 }
@@ -688,22 +691,23 @@ input:checked + .slider-blue:before {
   white-space: nowrap;
   overflow: hidden;
 }
+.car-price{
+  min-height: 24px;
+}
 .car-price span {
   font-size: 1.6rem;
 }
-.car-type {
+.vip-car-type {
   margin-top: 20px;
-  border-top: 1px solid var(--main-gray);
 }
-.car-type span {
+.vip-car-type span {
   font-size: 1.2rem;
   background-color: var(--main-gray);
   padding: 5px 15px;
   margin-right: 10px;
   border-radius: 12px;
-  margin-top: 10px;
 }
 .noPrice {
   font-family: "medium" !important;
-  font-size: 1.2rem !important;
+  font-size: 1.4rem !important;
 }

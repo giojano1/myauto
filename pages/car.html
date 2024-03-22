@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/car.css" />
+    <script src="../js/main.js"></script>
+    <title>
+      ახალი და მეორადი ავტომობილები, მოტოტექნიკა, სპეცტექნიკა | MyAuto
+    </title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navbar-left">
+          <div class="logo">
+            <img src="../assets/img/logo.png" alt="logo" />
+          </div>
+          <div class="searchbar">
+            <img src="../assets/icons/search.svg" alt="search" />
+            <label>
+              <input type="text" placeholder="ძებნა" />
+            </label>
+          </div>
+        </div>
+        <div class="navbar-right">
+          <div class="addnewBut navbuttons">
+            <button>
+              <img src="../assets/icons/add.svg" alt="" /><a href="#"
+                >დამატება</a
+              >
+            </button>
+          </div>
+          <div class="languageBut navbuttons">
+            <button class="nav-dropbtn" onclick="navFunction()">
+              <img src="../assets/icons/global.svg" alt="" /><a href="#"
+                >ქართული, ₾</a
+              >
+            </button>
+            <!-- dropdown -->
+            <div id="headerDropdown" class="nav-dropdown-content">
+              <!--  -->
+              <div class="dropdown-lang dropnav">
+                <p>ენა</p>
+                <label>
+                  <input name="radio1" type="radio" checked />
+                  <span>ქართული</span>
+                </label>
+                <label>
+                  <input name="radio1" type="radio" />
+                  <span>English</span>
+                </label>
+                <label>
+                  <input name="radio1" type="radio" />
+                  <span>Русский</span>
+                </label>
+              </div>
+              <!-- currency-->
+              <div class="dropdown-currency dropnav">
+                <p>ვალუტა</p>
+                <label>
+                  <input name="radio2" type="radio" />
+                  <span>USD - $</span>
+                </label>
+                <label>
+                  <input name="radio2" type="radio" />
+                  <span>GEL - ₾</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="loginBut navbuttons">
+            <button>
+              <img src="../assets/icons/user.svg" alt="" /><a href="#"
+                >შესვლა</a
+              >
+            </button>
+          </div>
+          <div class="tnetBut navbuttons">
+            <button><img src="../assets/img/tnet.png" alt="tnetlogo" /></button>
+          </div>
+        </div>
+      </nav>
+
+      <section class="categories">
+        <div class="cat-container">
+          <ul class="cat-cat">
+            <li><a href="">განბაჟება/გაფორმება</a></li>
+            <li><a href="">VIN-ის შემოწმება</a></li>
+            <li><a href="">დილერები</a></li>
+            <li><a href="">ავტოსალონები</a></li>
+            <li><a href="">აუქციონი</a></li>
+            <li><a href="">ავტონაწილები</a></li>
+            <li><a href="">კატალოგი</a></li>
+            <li><a href="">ბლოგი</a></li>
+          </ul>
+
+          <ul class="cat-nav">
+            <li><a href="">დახმარება</a></li>
+            <li><a href="">კონტაქტი</a></li>
+          </ul>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <div class="car-page-container">
+        <div class="car-container-header">
+          <div class="car-container-title">
+            <div class="car-name">
+              <p>Ford Mustang</p>
+              <span>1969</span>
+            </div>
+            <div class="car-head-nav">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="../assets/icons/heart.svg" alt="heart"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="../assets/icons/compare.svg" alt="compare"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="../assets/icons/add2.svg" alt="add"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="../assets/icons/print-outline.svg" alt="print"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="../assets/icons/share.svg" alt="share"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="car-container-bottom-nav">
+            <span>თბილისი</span>
+            <span>135 ნახვა 2 დღე</span>
+            <p>ID 102347255</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
